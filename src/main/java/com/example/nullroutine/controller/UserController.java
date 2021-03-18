@@ -31,4 +31,11 @@ public class UserController {
         // 如果想做前后端分离的话可以加上@ResponseBody注解，直接返回数据对象，这样前端就可以通过获取json来渲染数据了
         return userService.getAll();
     }
+
+    @RequestMapping("/testInterceptor")
+    public String testInterceptor(){
+        System.out.println("testInterceptor执行了...");
+        return "success";
+    }
+
 }
